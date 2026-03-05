@@ -1,0 +1,41 @@
+# --- IDEs and OS ---
+.DS_Store
+.vscode/
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+*.swp
+*.user
+
+# --- Build Output ---
+# We ignore the entire build folder because CMake generates it
+build/
+bin/
+obj/
+
+# --- vcpkg Specifics (CRITICAL) ---
+# We want the vcpkg FOLDER (the submodule) but NOT the heavy stuff inside it
+vcpkg/*
+!vcpkg/.git
+!vcpkg/scripts/
+!vcpkg/bootstrap-vcpkg.sh
+!vcpkg/bootstrap-vcpkg.bat
+!vcpkg/vcpkg.exe
+!vcpkg/vcpkg
+
+# Ignore the actual installed libraries and build trees
+vcpkg_installed/
+vcpkg/installed/
+vcpkg/buildtrees/
+vcpkg/packages/
+vcpkg/downloads/
+
+# --- Artifacts ---
+*.log
+*.exe
+*.o
+*.obj
+*.a
+*.lib
+*.dylib
+*.so
